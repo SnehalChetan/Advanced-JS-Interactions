@@ -6,7 +6,38 @@
     <title>Interactions</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet" type="text/css">
-
+    <style>
+        .modal-fader {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            z-index: 99998;
+            background: rgba(0,0,0,0.8);
+        }
+        .modal-fader.active {
+            display: block;
+        }
+        .modal-window {
+            display: none;
+            position: absolute;
+            left: 50%; top: 50%;
+            vertical-align: middle;
+            transform: translateX(-50%);
+            z-index: 99999;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            font-family: sans-serif;
+           
+        }
+        .modal-window.active {
+            display: block;
+        }
+        </style>
 </head>
 <body class="lightMode">
 <section class="main container">
@@ -21,54 +52,114 @@
     <div class="row collage">
         <div class="col-12 title">I want a collage here, and if I click the image, it will enlarge and give me a short description!</div>
         <div class="col-3 picture">
-            <div class="image"></div>
+            <div class="image">
+                <img class="open-modal" data-target="modal-1" src="./img/cheetah.jpg" alt="cheetah" height= "100%"
+                width="100%">
+                <div id="modal-1" class="modal-window">
+                    <h2Cheetah</h2>
+                    <img class="open-modal" data-target="modal-1" src="./img/cheetah.jpg" alt="cheetah">
+                    <p>The cheetah (Acinonyx jubatus) is a large cat native to Africa and central Iran. It is the fastest land animal, estimated to be capable of running at 80 to 128 km/h</p>
+                    <p>Nam porta, quam ut elementum sollicitudin, augue nibh ornare turpis.</p>
+                    <button type="button" class="modal-btn modal-hide">Close</button>
+                </div>
+                <div class="modal-fader"></div>
+            </div>
         </div>
         <div class="col-3 picture">
-            <div class="image"></div>
+            <div class="image">
+                <img class="open-modal" data-target="modal-2" src="./img/elephant.jpg" alt="elephant" height= "100%"
+                width="100%"/>
+                <div id="modal-2" class="modal-window">
+                    <h2>Elaphant</h2>
+                    <img class="open-modal" data-target="modal-2" src="./img/elephant.jpg" alt="elephant"/>
+                    <p>The cheetah (Acinonyx jubatus) is a large cat native to Africa and central Iran. It is the fastest land animal, estimated to be capable of running at 80 to 128 km/h</p>
+                    <button type="button" class="modal-btn modal-hide">Close</button>
+                </div>
+                <div class="modal-fader"></div>
+            </div>
         </div>
         <div class="col-3 picture">
-            <div class="image"></div>
+            <div class="image">
+                <img class="open-modal" data-target="modal-3" src="./img/lion.jpg" alt="lion" height= "100%"
+                width="100%">
+                <div id="modal-3" class="modal-window">
+                    <h2>Lion</h2>
+                    <img class="open-modal" data-target="modal-3" src="./img/lion.jpg" alt="lion"/>
+                    <p>The lion (Panthera leo) is a large cat of the genus Panthera native to Africa and India. It has a muscular, broad-chested body, short, rounded head, round ears, and a hairy tuft at the end of its tail.</p>
+                    <button type="button" class="modal-btn modal-hide">Close</button>
+                </div>
+                <div class="modal-fader"></div>
+            </div>
         </div>
         <div class="col-3 picture">
-            <div class="image"></div>
+            <div class="image">
+                <img class="open-modal" data-target="modal-4" src="./img/white_tiger_1.jpg" alt="white Tiger" height= "100%"
+                width="100%">
+                <div id="modal-4" class="modal-window">
+                    <h2>White Tiger</h2>
+                    <img class="open-modal" data-target="modal-4" src="./img/white_tiger_1.jpg" alt="white Tiger"/>
+                    <p>The white tiger or bleached tiger is a leucistic pigmentation variant of the Bengal tiger, Siberian tiger and hybrids between the two. It is reported in the wild from time to time in the Indian states in the Sunderbans region and especially in the former State of Rewa. It has the typical black stripes of a tiger, but carries a white or near-white coat</p>
+                    <button type="button" class="modal-btn modal-hide">Close</button>
+                </div>
+                <div class="modal-fader"></div>
+            </div>
         </div>
         <div class="col-3 picture">
-            <div class="image"></div>
+            <div class="image">
+                <img class="open-modal" data-target="modal-4" src="./img/giraffe.jpg" alt="Giraffe" height= "100%"
+                width="100%">
+                <div id="modal-4" class="modal-window">
+                    <h2>Giraffe</h2>
+                    <img class="open-modal" data-target="modal-4" src="./img/giraffe.jpg" alt="Giraffe"/>
+                    <p>The giraffe is a tall African hoofed mammal belonging to the genus Giraffa. It is the tallest living terrestrial animal and the largest ruminant on Earth.</p>
+                    <button type="button" class="modal-btn modal-hide">Close</button>
+                </div>
+                <div class="modal-fader"></div>
+            </div>
         </div>
         <div class="col-3 picture">
-            <div class="image"></div>
+            <div class="image">
+                <img class="open-modal" data-target="modal-4" src="./img/chimpanzee.jpg" alt="chimpanzee" height= "100%"
+                width="100%">
+                <div id="modal-4" class="modal-window">
+                    <h2>Chimpanzee</h2>
+                    <img class="open-modal" data-target="modal-4" src="./img/chimpanzee.jpg" alt="Chimpanzee"/>
+                    <p>They generally eat leafy material, although their ability to ferment food in their hindgut allows them to subsist on more fibrous plant matter when necessary.</p>
+                    <button type="button" class="modal-btn modal-hide">Close</button>
+                </div>
+                <div class="modal-fader"></div>
+
+            </div>
         </div>
         <div class="col-3 picture">
-            <div class="image"></div>
+            <div class="image">
+                <img class="open-modal" data-target="modal-4" src="./img/raindeer.jpg" alt="Raindeer" height= "100%"
+                width="100%">
+                <div id="modal-4" class="modal-window">
+                    <h2>Raindeer</h2>
+                    <img class="open-modal" data-target="modal-4" src="./img/raindeer.jpg" alt="Raindeer"/>
+                    <p>The reindeer (Rangifer tarandus), also known as the caribou in North America,[4] is a species of deer with circumpolar distribution, native to Arctic, subarctic.</p>
+                    <button type="button" class="modal-btn modal-hide">Close</button>
+                </div>
+                <div class="modal-fader"></div>
+            </div>
         </div>
         <div class="col-3 picture">
-            <div class="image"></div>
+            <div class="image">
+                <img class="open-modal" data-target="modal-4" src="./img/rhinoceros.jpg" alt="rhinoceros" height= "100%"
+                width="100%">
+                <div id="modal-4" class="modal-window">
+                    <h2>rhinoceros</h2>
+                    <img class="open-modal" data-target="modal-4" src="./img/rhinoceros.jpg" alt="rhinoceros"/>
+                    <p>Rhinoceroses are some of the largest remaining megafauna: all weigh at least one tonne in adulthood. They have a herbivorous diet, small brains (400–600 g) for mammals of their size, one or two horns, and a thick (1.5–5 cm).They generally eat leafy material, although their ability to ferment food in their hindgut allows them to subsist on more fibrous plant matter when necessary.</p>
+                    <button type="button" class="modal-btn modal-hide">Close</button>
+                </div>
+                <div class="modal-fader"></div>
+            </div>
         </div>
-        <div class="col-3 picture">
-            <div class="image"></div>
-        </div>
-        <div class="col-3 picture">
-            <div class="image"></div>
-        </div>
-        <div class="col-3 picture">
-            <div class="image"></div>
-        </div>
-        <div class="col-3 picture">
-            <div class="image"></div>
-        </div>
-        <div class="col-3 picture">
-            <div class="image"></div>
-        </div>
-        <div class="col-3 picture">
-            <div class="image"></div>
-        </div>
-        <div class="col-3 picture">
-            <div class="image"></div>
-        </div>
-        <div class="col-3 picture">
-            <div class="image"></div>
-        </div>
+        
     </div>
+   
     <div class="row popupText">
         <div class="col-12 title">When I hover a Pokemon's name, I want to get a small popup image above it to see what it looks like!</div>
         <div class="col-12 text">It is stated in multiple Pokédex entries that some Pokémon are known to eat others, such as <span class="poke">Pidgeot</span> swooping down to catch a <span class="poke">Magikarp</span> meal from the water. Humans have also been implied to eat Pokémon, with the player's Mom's Cinnabar Volcano Burgers and Team Rocket's plot to sell <span class="poke">Slowpoke</span> Tails as a sweet treat. <span class="poke">Farfetch'd</span> itself is based on a specific manner for preparing a meal of duck, with its rarity in the wild being a result of overhunting.</div>
