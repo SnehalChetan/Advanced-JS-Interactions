@@ -77,3 +77,16 @@ body{
 .mode:hover{
     cursor: pointer;
 }
+
+/*modal*/
+.modal-fader.active,
+.modal-window.active {
+    display: block;
+}
+.modal-fader{display: none;position: fixed;top: 0;left: 0;right: 0;bottom: 0;width: 100%;z-index: 99998;background: rgba(0,0,0,0.8);}
+.modal-window{display: none; position: absolute; left: 50%; top:100%; vertical-align: middle;
+    transform: translateX(-50%);z-index: 99999;background: #fff;padding: 20px;}
+.modal-content{background-color: #fefefe;margin: 15% auto; padding: 20px;border: 1px solid #888;width: 80%;}
+/* Modal Content/Box */
+
+.close{color: #aaa;float: right;font-size: 28px;font-weight: bold;}
