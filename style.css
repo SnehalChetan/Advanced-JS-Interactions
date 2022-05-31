@@ -136,3 +136,34 @@ body{
     opacity: 0;
     transition: opacity 0.4s;
 }
+/**
+*chaser
+*/
+
+
+#mouse-traking{
+    border: 1px solid grey;
+    height: 350px;
+    padding: 0;
+    position: absolute;
+}
+.chaser{
+    position: relative;
+    transition-property: top, left;
+    transition-duration: 0.2s ease-in;
+}
+
+/**
+* runner
+*
+#mouseRunner{
+    border: 1px solid grey;
+    height: 350px;
+    padding: 0;
+    position: relative;
+}
+.runner{
+    position: absolute;
+    transition-property: top, left;
+    transition-duration: 0.1s;
+}*/

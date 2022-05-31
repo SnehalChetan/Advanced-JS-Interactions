@@ -14,7 +14,7 @@ const createCarousel = () => {
         if(i == imgArray.length){
             i = 0;
         }
-        console.log("imgArray[i++%imgArray.length] = value =  "+imgArray[i]);
+       // console.log("imgArray[i++%imgArray.length] = value =  "+imgArray[i]);
         document.querySelector('.carouselContainer').style.backgroundImage = `url(\'${imgArray[i]}\')`;
         i++;
     }
@@ -109,6 +109,28 @@ const pokeMouseOut = () => {
 
 pokeMouseOver();
 pokeMouseOut();
+
+/*
+*chasing
+*//**/
+let chaser = document.querySelector('.chaser');
+document.querySelector('#mouse-tracking').addEventListener('mousemove', function (e){
+    let rect = document.querySelector('#mouse-tracking').getBoundingClientRect();
+    let x = e.clientX - rect.left - 25 ;
+    let y = e.clientY - rect.top - 25;
+    if(x>0 && y>0){ //console.log("x = "+x+" y = "+y);
+        if(x < rect.right - rect.left - 50 || y > rect.bottom - rect.top - 50){
+           chaser.style.left = x+"px";
+           chaser.style.top = y+"px";
+           
+           /*console.log("x = "+x+" y = "+y);
+            console.log("rect top = "+rect.top+" rect bottom = "+rect.bottom);
+            console.log("rect left = "+rect.left+" rect right = "+rect.right);*/
+        }
+    }
+    
+});
+
 /**
  * letters
  */
