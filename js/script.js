@@ -1,8 +1,11 @@
-
+// (()=>{
+//     document.querySelector('.carouselContainer').style.backgroundImage = 'url("./img/carousel/2.jpg")';
+// })();
 
 /**
  * parallax carousel
  */
+
 let imgArray = ['./img/carousel/1.jpg','./img/carousel/2.jpg','./img/carousel/3.jpg','./img/carousel/4.jpg'];
 const createCarousel = () => {
     document.querySelector('.carouselContainer').style.backgroundImage =  `url(\'${imgArray[imgArray.length-1]}\')`;
@@ -83,8 +86,29 @@ modalWindows.forEach(function (modalWindow) {
 });
 }
 
+/**
+ *  show poke image on mouse over the pokemon name
+ */
 
+const pokeMouseOver = () => {
+    document.querySelectorAll('.poke').forEach(poke=>{
+        poke.addEventListener('mouseover', ()=>{
+           poke.querySelector('img').style.visibility = 'visible';
+           poke.querySelector('img').style. opacity = '1';
+        });
+    });
+}
+const pokeMouseOut = () => {
+    document.querySelectorAll('.poke').forEach(poke=>{
+        poke.addEventListener('mouseout', ()=>{
+            poke.querySelector('img').style.visibility = 'hidden';
+            poke.querySelector('img').style. opacity = '0';
+        });
+    });
+}
 
+pokeMouseOver();
+pokeMouseOut();
 /**
  * letters
  */
